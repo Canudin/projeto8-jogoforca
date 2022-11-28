@@ -6,14 +6,14 @@ export default function CharButton(props) {
       <Button
         className="charbutton"
         onClick={() => {
-          let i = Number(props.ErrorNumber);
+          let i = Number(props.errorNumber);
           props.setClickedLetter([...props.clickedLetter, props.text]);
           const n = props.chosenWord.split("");
           if (!n.includes(props.text)){
             i++
-            // props.setErrorNumber(i)
+            props.setErrorNumber(i)
           }
-          console.log(props.ErrorNumber, "rodei")
+          console.log(props.errorNumber, "rodei")
         }}
       >
         {props.text}
