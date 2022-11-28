@@ -9,6 +9,7 @@ function App() {
   const [revealed, setRevealed] = useState(false);
   const [chosenArray, setChosenArray] = useState([]);
   const [errorNumber, setErrorNumber] = useState(0);
+  const [clickedLetter, setClickedLetter] = useState([]);
 
   return (
     <>
@@ -27,6 +28,8 @@ function App() {
         setRevealed={setRevealed}
         errorNumber={errorNumber}
         setErrorNumber={setErrorNumber}
+        clickedLetter={clickedLetter}
+        setClickedLetter={setClickedLetter}
       />
     </>
   );

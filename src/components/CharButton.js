@@ -6,13 +6,8 @@ export default function CharButton(props) {
       <Button
         className="charbutton"
         onClick={() => {
-          let charExists = false;
-          props.setRevealed(true);
-          props.chosenWord.map((char, index) => {
-            if (char === props.text) {
-              charExists = true;
-            }
-          });
+          props.setClickedLetter([...props.clickedLetter, props.text]);
+          console.log(props.clickedLetter)
         }}
       >
         {props.text}
@@ -26,3 +21,11 @@ const Button = styled.button`
   height: 30px;
   margin: 5px;
 `;
+
+// let charExists = false;
+// props.setRevealed(true);
+// props.chosenWord.map((char, index) => {
+//   if (char === props.text) {
+//     charExists = true;
+//   }
+// });

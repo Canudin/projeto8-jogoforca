@@ -1,11 +1,13 @@
-import { useState } from "react";
 import styled from "styled-components";
 
 export default function CharVisual(props) {
-  const [char, setChar] = useState("_");
+  function functionError(){
+    props.setErrorNumber(props.errorNumber+1)
+    return "_"
+  }
   return (
     <>
-      <Char>{char}</Char>
+      <Char>{props.clickedLetter.includes(props.char) ? props.char : functionError}</Char>
     </>
   );
 }

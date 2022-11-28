@@ -40,6 +40,8 @@ export default function Characters(props) {
           setRevealed={props.setRevealed}
           setErrorNumber={props.setErrorNumber}
           errorNumber={props.errorNumber}
+          clickedLetter={props.clickedLetter}
+          setClickedLetter={props.setClickedLetter}
         />
       ))}
     </Keyboard>

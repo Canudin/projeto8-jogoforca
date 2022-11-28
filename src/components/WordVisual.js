@@ -7,10 +7,16 @@ export default function WordVisual(props) {
   return (
     <LetterContainer>
       {props.chosenWord.split("").map((char, index) => {
-        console.log(char, index);
         return (
           <Letter key={index}>
-            <CharVisual char={char} index={index} revealed={props.revealed} />
+            <CharVisual
+              char={char}
+              index={index}
+              revealed={props.revealed}
+              clickedLetter={props.clickedLetter}
+              setErrorNumber={props.setErrorNumber}
+              errorNumber={props.errorNumber}
+            />
           </Letter>
         );
       })}
@@ -26,7 +32,6 @@ const LetterContainer = styled.div`
 `;
 
 const Letter = styled.div`
-  background-color: lightgray;
   color: black;
   font-size: 20px;
 `;
