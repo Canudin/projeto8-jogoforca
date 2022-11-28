@@ -24,7 +24,7 @@ export default function Bottom(props) {
         clickedLetter={props.clickedLetter}
         setClickedLetter={props.setClickedLetter}
       />
-      <GuessInput />
+      <GuessInput chosenWord={props.chosenWord}/>
     </Body>
   );
 }

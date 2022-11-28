@@ -8,8 +8,10 @@ function App() {
   const [chosenWord, setChosenWord] = useState("");
   const [revealed, setRevealed] = useState(false);
   const [chosenArray, setChosenArray] = useState([]);
-  const [errorNumber, setErrorNumber] = useState(0);
+  const [errorNumber, setErrorNumber] = useState([0]);
   const [clickedLetter, setClickedLetter] = useState([]);
+
+  while(errorNumber < 7){
 
   return (
     <>
@@ -32,7 +34,7 @@ function App() {
         setClickedLetter={setClickedLetter}
       />
     </>
-  );
+  )};
 }
 
 export default App;

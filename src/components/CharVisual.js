@@ -1,13 +1,9 @@
 import styled from "styled-components";
 
 export default function CharVisual(props) {
-  function functionError(){
-    props.setErrorNumber(props.errorNumber+1)
-    return "_"
-  }
   return (
     <>
-      <Char>{props.clickedLetter.includes(props.char) ? props.char : functionError}</Char>
+      <Char>{props.clickedLetter.includes(props.char) ? props.char : "_"}</Char>
     </>
   );
 }
