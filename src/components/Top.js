@@ -4,12 +4,11 @@ import ForcaImg from "./ForcaImg";
 import { useState } from "react";
 
 export default function Top(props) {
-  const [errorNumber, setErrorNumber] = useState(0);
+
   return (
     <Topo>
       <ForcaImg
-        errorNumber={errorNumber}
-        setErrorNumber={setErrorNumber}
+        errorNumber={props.errorNumber}
       />
       <ChooseWord
         words={props.words}

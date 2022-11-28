@@ -4,7 +4,8 @@ export default function ChooseWord(props) {
     <ChooseWordButton>
       <button
         onClick={() => {
-          const n = props.words[0];
+          const rnd = Math.floor(Math.random() * props.words.length);
+          const n = props.words[rnd];
           console.log(n, "ChooseWordButton");
           props.setGameOn(true);
           props.setChosenWord(n);

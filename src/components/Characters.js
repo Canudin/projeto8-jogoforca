@@ -1,7 +1,7 @@
 import CharButton from "./CharButton";
 import styled from "styled-components";
 
-export default function Characters() {
+export default function Characters(props) {
   const alphabet = [
     "a",
     "b",
@@ -34,7 +34,13 @@ export default function Characters() {
   return (
     <Keyboard>
       {alphabet.map((char) => (
-        <CharButton text={char} />
+        <CharButton
+          text={char}
+          chosenWord={props.chosenWord}
+          setRevealed={props.setRevealed}
+          setErrorNumber={props.setErrorNumber}
+          errorNumber={props.errorNumber}
+        />
       ))}
     </Keyboard>
   );
