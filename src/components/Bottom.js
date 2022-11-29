@@ -25,6 +25,7 @@ export default function Bottom(props) {
         setClickedLetter={props.setClickedLetter}
         lettersDisabled={props.lettersDisabled}
         setLettersDisabled={props.setLettersDisabled}
+        setImage={props.setImage}
       />
       <GuessInput chosenWord={props.chosenWord}/>
     </Body>

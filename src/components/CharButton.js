@@ -7,12 +7,14 @@ export default function CharButton(props) {
         className="charbutton"
         disabled={props.lettersDisabled[props.index]}
         onClick={() => {
-          let i = Number(props.errorNumber);
+          
           props.setClickedLetter([...props.clickedLetter, props.char]);
           const n = props.chosenWord.split("");
           if (!n.includes(props.char)) {
+            let i = Number(props.errorNumber);
             i++;
             props.setErrorNumber(i);
+            props.setImage(`/assets/img/forca${i}.png`)
           }
           console.log(props.errorNumber, props.lettersDisabled, "rodei");
           let lettersDisabled = [...props.lettersDisabled];

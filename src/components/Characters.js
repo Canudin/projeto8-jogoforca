@@ -45,6 +45,7 @@ export default function Characters(props) {
           setClickedLetter={props.setClickedLetter}
           lettersDisabled={props.lettersDisabled}
           setLettersDisabled={props.setLettersDisabled}
+          setImage={props.setImage}
         />
       ))}
     </Keyboard>

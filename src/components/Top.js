@@ -9,6 +9,7 @@ export default function Top(props) {
     <Topo>
       <ForcaImg
         errorNumber={props.errorNumber}
+        image={props.image}
       />
       <ChooseWord
         words={props.words}

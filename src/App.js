@@ -10,6 +10,7 @@ function App() {
   const [chosenArray, setChosenArray] = useState([]);
   const [errorNumber, setErrorNumber] = useState([0]);
   const [clickedLetter, setClickedLetter] = useState([]);
+  const [image, setImage] = useState("/assets/img/forca0.png");
   const [lettersDisabled, setLettersDisabled] = useState([
     true,
     true,
@@ -39,7 +40,7 @@ function App() {
     true,
   ]);
 
-  while (errorNumber < 7) {
+  while (errorNumber < 6) {
     return (
       <>
         <Top
@@ -49,6 +50,7 @@ function App() {
           setChosenArray={setChosenArray}
           errorNumber={errorNumber}
           setLettersDisabled={setLettersDisabled}
+          image={image}
         />
         <Bottom
           chosenWord={chosenWord}
@@ -62,6 +64,7 @@ function App() {
           setClickedLetter={setClickedLetter}
           lettersDisabled={lettersDisabled}
           setLettersDisabled={setLettersDisabled}
+          setImage={setImage}
         />
       </>
     );
