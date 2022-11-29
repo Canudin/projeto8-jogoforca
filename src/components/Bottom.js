@@ -13,8 +13,6 @@ export default function Bottom(props) {
         char={props.char}
         setChar={props.setChar}
         clickedLetter={props.clickedLetter}
-        setErrorNumber={props.setErrorNumber}
-        errorNumber={props.errorNumber}
       />
       <Characters
         chosenWord={props.chosenWord}

@@ -40,7 +40,7 @@ function App() {
     true,
   ]);
 
-  while (errorNumber < 6) {
+  while (errorNumber < 7) {
     return (
       <>
         <Top
@@ -49,8 +49,12 @@ function App() {
           setChosenWord={setChosenWord}
           setChosenArray={setChosenArray}
           errorNumber={errorNumber}
+          setErrorNumber={setErrorNumber}
+          lettersDisabled={lettersDisabled}
           setLettersDisabled={setLettersDisabled}
           image={image}
+          setImage={setImage}
+          setClickedLetter={setClickedLetter}
         />
         <Bottom
           chosenWord={chosenWord}

@@ -8,7 +8,17 @@ export default function ChooseWord(props) {
           const n = props.words[rnd];
           props.setGameOn(true);
           props.setChosenWord(n);
-          props.setLettersDisabled(!props.lettersDisabled);
+          let setLettersDisabled = [...props.lettersDisabled];
+          setLettersDisabled.map((n, index) => {
+            if (n) {
+              setLettersDisabled[index] = !n;
+            }
+          });
+          props.setLettersDisabled(setLettersDisabled);
+          props.setErrorNumber(0);
+          props.setImage(`/assets/img/forca0.png`);
+          props.setClickedLetter([]);
+          console.log(setLettersDisabled);
         }}
       >
         Escolher Palavra

@@ -4,7 +4,6 @@ import ForcaImg from "./ForcaImg";
 import { useState } from "react";
 
 export default function Top(props) {
-
   return (
     <Topo>
       <ForcaImg
@@ -18,6 +17,9 @@ export default function Top(props) {
         setChosenArray={props.setChosenArray}
         setLettersDisabled={props.setLettersDisabled}
         lettersDisabled={props.lettersDisabled}
+        setErrorNumber={props.setErrorNumber}
+        setImage={props.setImage}
+        setClickedLetter={props.setClickedLetter}
       />
     </Topo>
   );
