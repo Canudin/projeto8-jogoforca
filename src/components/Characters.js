@@ -33,15 +33,18 @@ export default function Characters(props) {
 
   return (
     <Keyboard>
-      {alphabet.map((char) => (
+      {alphabet.map((char, index) => (
         <CharButton
-          text={char}
+          char={char}
+          index={index}
           chosenWord={props.chosenWord}
           setRevealed={props.setRevealed}
           setErrorNumber={props.setErrorNumber}
           errorNumber={props.errorNumber}
           clickedLetter={props.clickedLetter}
           setClickedLetter={props.setClickedLetter}
+          lettersDisabled={props.lettersDisabled}
+          setLettersDisabled={props.setLettersDisabled}
         />
       ))}
     </Keyboard>

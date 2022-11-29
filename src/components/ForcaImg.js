@@ -25,6 +25,7 @@ export default function ForcaImg(props) {
         setImage("/assets/img/forca6.png");
         break;
       default:
+        console.log("deu ruim na att da imagem")
         break;
     }
   }

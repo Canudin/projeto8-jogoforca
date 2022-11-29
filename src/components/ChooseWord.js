@@ -8,6 +8,7 @@ export default function ChooseWord(props) {
           const n = props.words[rnd];
           props.setGameOn(true);
           props.setChosenWord(n);
+          props.setLettersDisabled(!props.lettersDisabled);
         }}
       >
         Escolher Palavra

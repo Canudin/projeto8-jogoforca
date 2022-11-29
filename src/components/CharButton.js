@@ -5,18 +5,22 @@ export default function CharButton(props) {
     <>
       <Button
         className="charbutton"
+        disabled={props.lettersDisabled[props.index]}
         onClick={() => {
           let i = Number(props.errorNumber);
-          props.setClickedLetter([...props.clickedLetter, props.text]);
+          props.setClickedLetter([...props.clickedLetter, props.char]);
           const n = props.chosenWord.split("");
-          if (!n.includes(props.text)){
-            i++
-            props.setErrorNumber(i)
+          if (!n.includes(props.char)) {
+            i++;
+            props.setErrorNumber(i);
           }
-          console.log(props.errorNumber, "rodei")
+          console.log(props.errorNumber, props.lettersDisabled, "rodei");
+          let lettersDisabled = [...props.lettersDisabled];
+          lettersDisabled[props.index] = true;
+          props.setLettersDisabled(lettersDisabled);
         }}
       >
-        {props.text}
+        {props.char}
       </Button>
     </>
   );
@@ -31,7 +35,7 @@ const Button = styled.button`
 // let charExists = false;
 // props.setRevealed(true);
 // props.chosenWord.map((char, index) => {
-//   if (char === props.text) {
+//   if (char === props.char) {
 //     charExists = true;
 //   }
 // });

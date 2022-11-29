@@ -15,6 +15,8 @@ export default function Top(props) {
         setGameOn={props.setGameOn}
         setChosenWord={props.setChosenWord}
         setChosenArray={props.setChosenArray}
+        setLettersDisabled={props.setLettersDisabled}
+        lettersDisabled={props.lettersDisabled}
       />
     </Topo>
   );
