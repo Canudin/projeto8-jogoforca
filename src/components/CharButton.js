@@ -33,11 +33,3 @@ const Button = styled.button`
   height: 30px;
   margin: 5px;
 `;
-
-// let charExists = false;
-// props.setRevealed(true);
-// props.chosenWord.map((char, index) => {
-//   if (char === props.char) {
-//     charExists = true;
-//   }
-// });

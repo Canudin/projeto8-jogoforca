@@ -12,7 +12,6 @@ export default function WordVisual(props) {
             <CharVisual
               char={char}
               index={index}
-              revealed={props.revealed}
               clickedLetter={props.clickedLetter}
               setErrorNumber={props.setErrorNumber}
               errorNumber={props.errorNumber}

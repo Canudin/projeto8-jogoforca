@@ -38,7 +38,6 @@ export default function Characters(props) {
           char={char}
           index={index}
           chosenWord={props.chosenWord}
-          setRevealed={props.setRevealed}
           setErrorNumber={props.setErrorNumber}
           errorNumber={props.errorNumber}
           clickedLetter={props.clickedLetter}

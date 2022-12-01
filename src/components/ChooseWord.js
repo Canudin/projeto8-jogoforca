@@ -6,7 +6,6 @@ export default function ChooseWord(props) {
         onClick={() => {
           const rnd = Math.floor(Math.random() * props.words.length);
           const n = props.words[rnd];
-          props.setGameOn(true);
           props.setChosenWord(n);
           let setLettersDisabled = [...props.lettersDisabled];
           setLettersDisabled.map((n, index) => {

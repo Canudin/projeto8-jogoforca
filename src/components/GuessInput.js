@@ -6,10 +6,10 @@ export default function GuessInput(props) {
   
   
   function chutar() {
-    if (chute === props.chosenWord) {
-      console.log(chute, props.chosenWord, "yay");
+    if (chute.localeCompare(props.chosenWord, "pt") === 0) {
+      console.log(chute, props.chosenWord, "yay", chute.localeCompare(props.chosenWord, "pt"));
     } else {
-      console.log(chute, props.chosenWord, "perdeu");
+      console.log(chute, props.chosenWord, "perdeu", chute.localeCompare(props.chosenWord, "pt"));
     }
   }
   return (
